@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+       xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="a1" class="com.hcl.handson.Customer">
+       <property name="custId" value="101"></property>
+       <property name="custName" value="Ankt"></property>
+       <property name="emailId" value="ankit@gmail.com"></property>
+       <property name="contactNo" value="99999999"></property>
+    </bean>
+    
+    <bean id="a2" class="com.hcl.handson.Customer">
+       <property name="custId" value="102"></property>
+       <property name="custName" value="Ankit ji"></property>
+       <property name="emailId" value="ankit1@gmail.com"></property>
+       <property name="contactNo" value="99999999"></property>
+    </bean>
+    
+    <bean id="obj1" class="com.hcl.handson.MemberShip">
+       <constructor-arg value="1"></constructor-arg>
+       <constructor-arg value="yearly"></constructor-arg>
+       <constructor-arg value="100"></constructor-arg>
+       <constructor-arg ref="a1"></constructor-arg>
+    </bean>
+    
+    <bean id="obj2" class="com.hcl.handson.MemberShip">
+       <constructor-arg value="2"></constructor-arg>
+       <constructor-arg value="yearly"></constructor-arg>
+       <constructor-arg value="1000"></constructor-arg>
+       <constructor-arg ref="a2"></constructor-arg>
+    </bean>
+
+</beans>
