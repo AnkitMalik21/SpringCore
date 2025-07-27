@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+       xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean id="a1" class = "com.hcl.setter.Address">
+       <property name="addressLine1" value="near station"></property>
+       <property name="city" value="Rohtak"></property>
+       <property name="state" value="Haryana"></property>
+       <property name="country" value="India"></property>
+   </bean>
+   
+   <bean id="a2" class = "com.hcl.setter.Address">
+       <property name="addressLine1" value="pinjore"></property>
+       <property name="city" value="pinjore"></property>
+       <property name="state" value="Haryana"></property>
+       <property name="country" value="India"></property>
+   </bean>
+   
+   
+   
+   <bean id="obj1" class = "com.hcl.setter.Employee">
+       <property name="id" value="101"></property>
+       <property name="name" value="Rakshit"></property>
+       <property name="address" ref="a1"></property> 
+   </bean>
+   
+   <bean id="obj2" class = "com.hcl.setter.Employee">
+       <property name="id" value="102"></property>
+       <property name="name" value="shiva"></property>
+       <property name="address" ref="a2"></property> 
+   </bean>
+
+</beans>

@@ -16,12 +16,17 @@
       <property name="connection.password">Malik@1</property>  
        
       <!-- Schema generation and SQL logging -->
-      <property name="hbm2ddl.auto">update</property>  
+      <property name="hbm2ddl.auto">create</property>  
       <property name="show_sql">true</property>
       <property name="format_sql">true</property>  
       
       <!-- Mapping classes -->
-      <mapping class="com.hcl.Bidir.ManyToMany.Employee"/>
-      <mapping class="com.hcl.Bidir.ManyToMany.Project"/>    
+      <!-- <mapping class="com.hcl.Bidir.ManyToMany.Employee"/>
+      <mapping class="com.hcl.Bidir.ManyToMany.Project"/>   -->  
+      <!-- <mapping class="com.hcl.lifeCycle.Employee"/> -->
+      <!-- <mapping class="com.hcl.orm.crud.Employee"/> -->
+      
+      <mapping class="com.hcl.Unidir.OneToOne.Address"/>
+       <mapping class="com.hcl.Unidir.OneToOne.Person"/>
    </session-factory>  
 </hibernate-configuration>
